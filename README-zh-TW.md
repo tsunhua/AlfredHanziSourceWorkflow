@@ -7,6 +7,8 @@
 
 啟動 Alfred，然後輸入 `c/ch/查 [ 要查的漢字 ]` 即可。
 
+圖中每一行右邊的操作是複製到剪貼簿。
+
 ### 效果圖
 
 ![screen_shot_search_zi](screenshot/screen_shot_search_zi.png)

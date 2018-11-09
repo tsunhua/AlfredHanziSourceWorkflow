@@ -9,6 +9,8 @@ Query the source of Chinese characters（or Hanzi）.
 
 Launch Alfred, and then input  `c/ch/查 [Hanzi]` , and it works.
 
+The action in right of each row is copy to the clipboard.
+
 ### Effect
 
 ![screen_shot_search_zi](screenshot/screen_shot_search_zi.png)
