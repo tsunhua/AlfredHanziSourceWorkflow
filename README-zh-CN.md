@@ -5,7 +5,7 @@
 
 ### 用法
 
-1. 下载 [QueryHanziSource.alfredworkflow](https://github.com/LinLshare/AlfredHanziSourceWorkflow/blob/master/QueryHanziSource.alfredworkflow) 并点击导入；
+1. 下载 [QueryHanziSource.alfredworkflow](https://github.com//LinLshare/AlfredHanziSourceWorkflow/raw/master/QueryHanziSource.alfredworkflow) 并点击导入；
 
 2. 启动 Alfred，然后输入 `c/ch/查 [ 要查的汉字 ]` 即可。
 
