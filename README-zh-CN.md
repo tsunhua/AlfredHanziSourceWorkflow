@@ -1,25 +1,23 @@
 # AlfredHanziSourceWorkflow
- [简体中文版介绍](https://github.com/LinLshare/AlfredHanziSourceWorkflow/blob/master/README-zh-CN.md)  [繁體中文版介紹](https://github.com/LinLshare/AlfredHanziSourceWorkflow/blob/master/README-zh-TW.md)
+### 功能
 
-### Feature
+查询汉字字源。
 
-Query the source of Chinese characters（or Hanzi）.
+### 用法
 
-### Usage
+启动 Alfred，然后输入 `c/ch/查 [ 要查的汉字 ]` 即可。
 
-Launch Alfred, and then input  `c/ch/查 [Hanzi]` , and it works.
-
-### Effect
+### 效果图
 
 ![screen_shot_search_zi](screenshot/screen_shot_search_zi.png)
 
-### Thanks to
+### 感谢
 
 - [象形字典](http://www.vividict.com/Default.aspx)
-- [漢語字典](http://dict.iguci.cn/)
-- [說文解字線上检索](http://www.shuowen.org/)
+- [汉语字典](http://dict.iguci.cn/)
+- [说文解字在线查询](http://www.shuowen.org/)
 
-### License
+### 协议
 
 ```
 Copyright [2018] [Lshare]
