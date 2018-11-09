@@ -1,7 +1,7 @@
 <?php
 require_once('workflows.php');
-require('HtmlDomParser.php');
-require_once("./Requests-1.7.0/library/Requests.php");
+require('./lib/simplehtmldom_1_5/HtmlDomParser.php');
+require_once("./lib/Requests-1.7.0/library/Requests.php");
 
 use Sunra\PhpSimple\HtmlDomParser;
 mb_internal_encoding("UTF-8");
