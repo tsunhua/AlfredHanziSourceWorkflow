@@ -5,9 +5,11 @@
 
 ### 用法
 
-启动 Alfred，然后输入 `c/ch/查 [ 要查的汉字 ]` 即可。
+1. 下载 [AlfredHanziSourceWorkflow](https://github.com/LinLshare/AlfredHanziSourceWorkflow/blob/master/AfredHanziSource.alfredworkflow) 并点击导入；
 
-图中每一行右边的操作是复制到剪贴板。
+2. 启动 Alfred，然后输入 `c/ch/查 [ 要查的汉字 ]` 即可。
+
+> 小贴士：图中每一行右边的操作是复制到剪贴板。
 
 ### 效果图
 

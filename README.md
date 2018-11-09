@@ -7,9 +7,11 @@ Query the source of Chinese characters（or Hanzi）.
 
 ### Usage
 
-Launch Alfred, and then input  `c/ch/查 [Hanzi]` , and it works.
+1. Download  [AlfredHanziSourceWorkflow](https://github.com/LinLshare/AlfredHanziSourceWorkflow/blob/master/AfredHanziSource.alfredworkflow)  and click import;
 
-The action in right of each row is copy to the clipboard.
+2. Launch Alfred, and then input  `c/ch/查 [Hanzi]` , and it works.
+
+> Tip: The action in right of each row is copy to the clipboard.
 
 ### Effect
 
