@@ -29,7 +29,7 @@ class Xsearch{
         return $response->body;
     }
     
-    private function addResult($wf, $data, $position, $icon='icon.png'){
+    private function addResult($wf, $url, $data, $position, $icon='icon.png'){
         $data = $this->getplaintextintrofromhtml($data);
         $data = preg_replace('/\s+/', ' ', $data);
         
@@ -42,11 +42,11 @@ class Xsearch{
             $d_title = mb_substr($data,0,26);
             $d_desc = mb_substr($data,26);
         }
-        $wf->result( $i.time(), "$data", "$d_title", "$d_desc", $icon );
+        $wf->result( $i.time(), "$url", "$d_title", "$d_desc", $icon );
     }
     
     private function queryXiangxing($orig){
-        $html = HtmlDomParser::file_get_html( "http://www.vividict.com/Word.aspx?ie=utf8&wd=".urlencode($orig));
+        $html = HtmlDomParser::file_get_html( $this->getXiangxingUrl($orig));
     
         $data = $html->find('.neirong p', 0);
     
@@ -63,23 +63,35 @@ class Xsearch{
     }
     
     private function shuowen($orig){
-        $url = "http://www.shuowen.org/?kaishu=".urlencode($orig)."&pinyin=&bushou=&jiegou=";
+        $url = $this->getShowwenUrl($orig);
         $html = HtmlDomParser::file_get_html($url);
         $data = $html->find('.media-body', 0);
         return $data;
+    }
+
+    private function getShowwenUrl($orig){
+        return "http://www.shuowen.org/?kaishu=".urlencode($orig)."&pinyin=&bushou=&jiegou=";
+    }
+
+    private function getXiangxingUrl($orig){
+        return "http://www.vividict.com/Word.aspx?ie=utf8&wd=".urlencode($orig);
+    }
+
+    private function getHanyuUrl($orig){
+        return "http://dict.iguci.cn/";
     }
     
     public function search($orig){
         Requests::register_autoloader();
         $wf = new Workflows();
 
-        $this->addResult($wf, $this->queryXiangxing($orig), 1,'icon_xiang.png');
-        $this->addResult($wf, $this->queryHanyu($orig), 2,'icon_han.png');
-        $this->addResult($wf, $this->shuowen($orig), 3, 'icon_shuo.png');
+        $this->addResult($wf, $this->getXiangxingUrl($orig),$this->queryXiangxing($orig), 1,'icon_xiang.png');
+        $this->addResult($wf, $this->getHanyuUrl($orig),$this->queryHanyu($orig), 2,'icon_han.png');
+        $this->addResult($wf, $this->getShowwenUrl($orig),$this->shuowen($orig), 3, 'icon_shuo.png');
         
         $results = $wf->results();
         if ( count( $results ) == 0 ):
-            $wf->result( 'xsearch', $orig, 'No Found', 'Search 象形词典 but not found. Search 象形词典 for '.$orig, 'icon.png' );
+            $wf->result( 'xsearch', $orig, 'No Found', 'Search Hanzi'.$orig.' but not found.', 'icon.png' );
         endif;
         
         echo $wf->toxml();

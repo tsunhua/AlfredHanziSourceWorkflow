@@ -11,7 +11,7 @@ Query the source of Chinese characters（or Hanzi）.
 
 2. Launch Alfred, and then input  `c/ch/查 [Hanzi]` , and it works.
 
-> Tip: The action in right of each row is copy to the clipboard.
+> Tip: The action in right of each row is jumping to the details page.
 
 ### Effect
 
