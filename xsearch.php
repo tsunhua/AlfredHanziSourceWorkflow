@@ -78,7 +78,7 @@ class Xsearch{
     }
 
     private function getHanyuUrl($orig){
-        return "http://dict.iguci.cn/";
+        return "http://dict.iguci.cn/dictionary/dcontent/index/word/".urlencode($orig);
     }
     
     public function search($orig){
